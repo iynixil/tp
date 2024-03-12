@@ -10,7 +10,7 @@ import static java.util.Objects.requireNonNull;
 import static staffconnect.logic.parser.CliSyntax.PREFIX_REMARK;
 import static staffconnect.logic.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
 
-public class RemarkCommandParser {
+public class RemarkCommandParser implements Parser<RemarkCommand> {
 
     public RemarkCommand parse(String args) throws ParseException {
         requireNonNull(args);
