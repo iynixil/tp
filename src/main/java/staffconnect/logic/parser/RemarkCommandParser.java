@@ -5,6 +5,7 @@ import staffconnect.commons.exceptions.IllegalValueException;
 import staffconnect.logic.commands.RemarkCommand;
 
 import staffconnect.logic.parser.exceptions.ParseException;
+import staffconnect.model.person.Remark;
 import static java.util.Objects.requireNonNull;
 import static staffconnect.logic.parser.CliSyntax.PREFIX_REMARK;
 import static staffconnect.logic.Messages.MESSAGE_INVALID_COMMAND_FORMAT;
@@ -26,6 +27,6 @@ public class RemarkCommandParser {
 
         String remark = argMultimap.getValue(PREFIX_REMARK).orElse("");
 
-        return new RemarkCommand(index, remark);
+        return new RemarkCommand(index, new Remark(remark));
     }
 }
